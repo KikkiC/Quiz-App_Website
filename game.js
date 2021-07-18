@@ -119,6 +119,7 @@ choices.forEach(choice => {
       downloadTimer = setInterval(myTimer, 1000);
       timerText.innerHTML = resetTime;
       timeLeft = resetTime;
+      timeout = false;
     }, 1000);
   });
 });
