@@ -59,17 +59,19 @@
 
 #timer {
     font-size: 5rem;
+    margin-top: 0.2rem;
 }
 
 #progressBar {
     width: 19.5rem;
     height: 4rem;
     border: 0.3rem solid #56a5eb;
-    margin-top: 2rem;
+    margin-top: 1.1rem;
 }
 
 #progressBarFull {
-    height: 3.35rem;
+    height: 98%;
+    margin-top: 0.2%;
     background-color: #56a5eb;
     width: 0%;
 }
@@ -90,5 +92,38 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #question {
+        font-size: 8vw;
+    }
+    .hud-prefix {
+        font-size: 4.5vw;
+    }
+    #progressBar {
+        width: 35vw;
+        height: 5vh;
+    }
+    #progressBarFull {
+        height: 95%;
+        margin-top: 0.4%;
+    }
+    .hud-main-text {
+        font-size: 8vw;
+        margin-top: 0.7rem;
+    }
+    #timer {
+        font-size: 8vw;
+        margin-top: 0.7rem;
+    }
+    .choice-container {
+        display: flex;
+        align-items: center;
+    }
+    .choice-text {
+        font-size: 80%;
     }
 }
