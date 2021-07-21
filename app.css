@@ -55,6 +55,7 @@ hr {
 .rule {
     padding: 0.25rem;
     color: #6552d1;
+    width: 48vw;
 }
 
 /* UTILITIES */
