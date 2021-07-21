@@ -105,11 +105,8 @@
     }
     #progressBar {
         width: 35vw;
-        height: 5vh;
-    }
-    #progressBarFull {
-        height: 95%;
-        margin-top: 0.4%;
+        height: 40%;
+        margin-top: 6.5%;
     }
     .hud-main-text {
         font-size: 8vw;
