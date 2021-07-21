@@ -46,8 +46,10 @@ fetch(
 });
 
 //CONSTANTS
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 50;
 const MAX_QUESTIONS = 5;
+
+var decreasing_bonus = CORRECT_BONUS;
 
 startGame = () => {
   questionCounter = 0;
@@ -107,7 +109,27 @@ choices.forEach(choice => {
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
     if (classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
+      if (timeLeft >= 13) {
+        incrementScore(CORRECT_BONUS);
+      } else if (timeLeft >= 11) {
+        decreasing_bonus = 45;
+        incrementScore(decreasing_bonus);
+      } else if (timeLeft >= 9) {
+        decreasing_bonus = 40;
+        incrementScore(decreasing_bonus);
+      } else if (timeLeft >= 7) {
+        decreasing_bonus = 35;
+        incrementScore(decreasing_bonus);
+      } else if (timeLeft >= 5) {
+        decreasing_bonus = 30;
+        incrementScore(decreasing_bonus);
+      } else if (timeLeft >= 3) {
+        decreasing_bonus = 20;
+        incrementScore(decreasing_bonus);
+      } else if (timeLeft >= 1) {
+        decreasing_bonus = 15;
+        incrementScore(decreasing_bonus);
+      }
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
